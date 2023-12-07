@@ -11,7 +11,7 @@ estimate_ar_model(time_series, p, criterion, ARMA = T)
 
 \item{p}{An integer specifying the maximum lag order of the AR model.}
 
-\item{criterion}{A string specifying the criterion for model selection. The valid options are "aic", "bic", "gbic", and "gaic".}
+\item{criterion}{A string specifying the criterion for model selection. The valid options are "aic", "bic","gaic", "gbic", and "gbicp".}
 }
 \value{
 The value of the specified criterion for the estimated AR model.
