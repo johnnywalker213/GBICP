@@ -2,4 +2,4 @@ exportPattern("^[[:alpha:]]+")
 importFrom(splines2, bSpline)
 importFrom(KernSmooth, locpoly)
 importFrom(forecast, Arima)
-
+importFrom("stats", "AIC", "BIC", "logLik", "quantile", "rnorm", "var")
