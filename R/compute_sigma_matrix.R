@@ -1,17 +1,17 @@
 #' Compute Sigma Matrix
 #'
-#' This function calculates the covariance matrix for a given time series with a specified lag order (p).
+#' This function calculates the inverse covariance matrix for a given time series with a specified lag order (p).
 #' It employs the function of 'estimate_phi' and the variance at each level to construct
 #' the covariance matrix in a band limited manner.
 #'
 #' @param time_series A numeric vector representing the time series data.
 #' @param p An integer indicating the lag order to be used in the calculation.
 #'
-#' @return A covariance matrix of the given time series.
+#' @return An inverse covariance matrix (precision matrix) of the given time series.
 #'
 #' @examples
 #' ts_data <- rnorm(100) # Example time series data
-#' cov_matrix <- compute_sigma_matrix(ts_data, 1) # Computing the covariance matrix
+#' inv_cov_matrix <- compute_sigma_matrix(ts_data, 1) # Computing the inverse covariance matrix
 #'
 #' @export
 #'
