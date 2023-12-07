@@ -95,12 +95,6 @@ create_lagged_matrix <- function(time_series, p) {
 
 estimate_phi <- function(time_series, p, b) {
 
-  create_lagged_matrix <- function(time_series, p) {
-    n <- length(time_series)
-    lagged_matrix <- sapply(1:p, function(i) c(rep(NA, i), time_series[1:(n-i)]))
-    return(lagged_matrix[-c(1:p),])
-  }
-
   lagged_X = create_lagged_matrix(time_series, p)
   phi_hat = solve(t(lagged_X) %*% lagged_X) %*% t(lagged_X) %*% time_series[-c(1:p)]
 
@@ -219,7 +213,7 @@ estimate_ar_model <- function(time_series, p, criterion, ARMA=T) {
 # Function to select the best AR(p) model
 select_best_ar_model <- function(time_series, max_p, criterion) {
   best_model <- NULL
-  best_criterion_value <- 99999
+  best_criterion_value <- Inf
 
   for (p in 1:max_p) {
     current_model <- estimate_ar_model(time_series, p, criterion)
