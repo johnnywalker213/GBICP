@@ -1,1 +1,5 @@
 exportPattern("^[[:alpha:]]+")
+importFrom(splines2, bSpline)
+importFrom(KernSmooth, locpoly)
+importFrom(forecast, Arima)
+
