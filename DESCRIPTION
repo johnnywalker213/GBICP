@@ -7,8 +7,7 @@ Maintainer: Qiyuan Wang <wqy213@tamu.edu>
 Description: The package applies b-splines detrending method and kernel smoothing for time-varying covariance matrix estimation for fitting auto-regressive time series model, and use generalized Bayesian information criteria with prior distribution for model selection.
 License: GPL (>=3)
 Imports:
-    splines,
-    stats,
+    splines2,
     forecast,
     KernSmooth
 Encoding: UTF-8
