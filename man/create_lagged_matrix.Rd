@@ -19,7 +19,7 @@ A matrix with p columns, each representing a lagged version of the input time se
 \description{
 This function generates a matrix where each column is a lagged version of the input time series.
 The number of lags (p) is specified by the user. NA values are used to fill in where data
-is not available due to lagging.
+is not available due to lagging, but the output will automatically remove rows are not complete.
 }
 \examples{
 ts <- 1:10
