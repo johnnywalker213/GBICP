@@ -18,6 +18,9 @@
 #' @references
 #' Zhao, Z., & Shao, X. (2013). Model selection for autoregressive processes with fractional time trends. Journal of the Royal Statistical Society: Series B (Statistical Methodology), 75(2), 323-341. https://doi.org/10.1111/rssb.12023
 #'
+#' @import stats
+#' @importFrom forecast Arima
+#'
 #' @export
 #'
 

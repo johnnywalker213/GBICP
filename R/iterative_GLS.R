@@ -22,6 +22,7 @@
 #' gls_result <- iterative_GLS(ts_data) # Perform iterative GLS estimation
 #'
 #' @export
+#'@importFrom splines2 bSpline
 #'
 
 iterative_GLS <- function(Yt, epsilon = 1e-6, b = 0.04, max_iter = 1000, criterion = 'gbicp') {
