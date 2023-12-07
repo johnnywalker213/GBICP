@@ -15,7 +15,7 @@
 #' estimate_phi(ts_data, p = 5, b = 0.5)
 #' @export
 #' @importFrom stats var
-#' @importFrom graphics locpoly
+#' @importFrom KernSmooth locpoly
 estimate_phi <- function(time_series, p, b) {
 
   lagged_X = create_lagged_matrix(time_series, p)
