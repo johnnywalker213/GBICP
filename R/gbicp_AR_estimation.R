@@ -13,9 +13,9 @@ generate_ts <- function(ar_coef = NULL, ma_coef = NULL, n, sigma2 = 1, midpoint 
   noise <- rnorm(n, mean = 0, sd = sqrt(sigma2))
 
   # create bell shape with time-varying scale factor
-  scale_factor <- 1*exp(-((t-midpoint)/n )^2/0.05)+0.1
-  noise_bell <- noise * scale_factor
-  #noise_bell = noise
+  #scale_factor <- 1*exp(-((t-midpoint)/n )^2/0.05)+0.1
+  #noise_bell <- noise * scale_factor
+  noise_bell = noise
 
   # Generate random noise if both AR and MA coefficients are NULL
   if (is.null(ar_coef) & is.null(ma_coef)) {
