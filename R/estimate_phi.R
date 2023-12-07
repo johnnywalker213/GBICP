@@ -26,7 +26,7 @@ estimate_phi <- function(time_series, p, b) {
   res = time_series[-c(1:p)] - err_est
   res_sq = res^2
 
-  est = locpoly(x = seq_along(res_sq)/length(res_sq),
+  est = KernSmooth::locpoly(x = seq_along(res_sq)/length(res_sq),
                 y= res_sq,
                 gridsize = length(res_sq),
                 kernel = "normal",
