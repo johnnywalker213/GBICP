@@ -4,7 +4,7 @@
 #'
 #' @param time_series A numeric vector representing the time series data.
 #' @param p An integer specifying the maximum lag order of the AR model.
-#' @param criterion A string specifying the criterion for model selection. The valid options are "aic", "bic", "gbic", and "gaic".
+#' @param criterion A string specifying the criterion for model selection. The valid options are "aic", "bic","gaic", "gbic", and "gbicp".
 #'
 #' @return The value of the specified criterion for the estimated AR model.
 #'
@@ -29,7 +29,7 @@ estimate_ar_model <- function(time_series, p, criterion) {
   X <- lagged_matrix
 
   #ar_model <- lm(Y ~ X-1)
-  ar_model = Arima(time_series, order=c(p,0,0))
+  ar_model = forecast::Arima(time_series, order=c(p,0,0))
   n <- length(time_series)
 
   #beta = ar_model$coefficients
